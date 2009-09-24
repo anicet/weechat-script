@@ -9,9 +9,10 @@
 # cp images/weechat.png ~/.weechat/images/
 
 def load_meow
+ #for mac os x only Snow Leopard
  $: <<
    '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8' <<
-   '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0'
+   '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0'
 
  require 'stringio'
  require 'rubygems'

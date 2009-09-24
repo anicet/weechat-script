@@ -8,10 +8,10 @@
 
 
 def load_prowl
- # for mac os x only
- #$: <<
- #  '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8' <<
- #  '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin9.0'
+ #for mac os x only Snow Leopard
+ $: <<
+   '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8' <<
+   '/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/universal-darwin10.0'
 
  require 'stringio'
  require 'rubygems'
@@ -76,7 +76,7 @@ def prowl_private_message(nickname, message)
 end
 
 def send_prowl(title, message)
-  Prowl.send("your apikey here", {
+  Prowl.add("your apikey here", {
       :application => "Weechat",
       :event => title,
       :description => message
